@@ -1,6 +1,5 @@
-package study;
+package study.chapter1.section1;
 
-import org.assertj.core.data.Index;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
