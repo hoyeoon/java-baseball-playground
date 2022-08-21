@@ -1,4 +1,4 @@
-package baseball.domain;
+package baseball;
 
 public class Application {
 
