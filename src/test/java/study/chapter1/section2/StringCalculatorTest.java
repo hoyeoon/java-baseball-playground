@@ -9,12 +9,12 @@ class StringCalculatorTest {
     String value = "2 + 3 * 4 / 2";
 
     @Test
-    void getStrings(){
+    void getStrings() {
         assertThat(StringCalculator.getStrings(value)).containsExactly("2", "+", "3", "*", "4", "/", "2");
     }
 
     @Test
-    void getInteger(){
+    void getInteger() {
         assertThatThrownBy(() -> {
             StringCalculator.getInteger("+");
         }).isInstanceOf(NumberFormatException.class);

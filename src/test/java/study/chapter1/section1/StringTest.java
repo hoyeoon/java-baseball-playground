@@ -22,7 +22,7 @@ public class StringTest {
     }
 
     @Test
-    void substring(){
+    void substring() {
         String str = "(1,2)";
         String actual = str.substring(1, str.length() - 1);
         assertThat(actual).isEqualTo("1,2");
@@ -30,7 +30,7 @@ public class StringTest {
 
     @Test
     @DisplayName("charAt() 문자를 가져올 때 index 값을 벗어났을 경우 에러")
-    void charAt(){
+    void charAt() {
         char actual = "abc".charAt(0);
         assertThat(actual).isEqualTo('a');
 

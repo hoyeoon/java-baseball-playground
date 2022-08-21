@@ -14,25 +14,25 @@ public class NumberBaseballGameClient {
 
         computer = randomNumberGenerators.generate();
 
-        while(flag != 2){
+        while (flag != 2) {
             System.out.println("computer = " + Arrays.toString(computer));
             System.out.print("숫자를 입력해 주세요 : ");
             player = Arrays.stream(sc.next().split("")).mapToInt(Integer::parseInt).toArray();
             ballCount = numberCompare.getBallCount(computer, player);
             strikeCount = numberCompare.getStrikeCount(computer, player);
             String message = "";
-            if(ballCount > 0){
+            if (ballCount > 0) {
                 message += ballCount + "볼 ";
             }
-            if(strikeCount > 0){
+            if (strikeCount > 0) {
                 message += strikeCount + "스트라이크";
             }
-            if(message.equals("")){
+            if (message.equals("")) {
                 message = "낫싱";
             }
             System.out.println(message);
 
-            if(strikeCount == 3){
+            if (strikeCount == 3) {
                 message = "3개의 숫자를 모두 맞히셨습니다! 게임 종료";
                 message += "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.";
                 System.out.println(message);

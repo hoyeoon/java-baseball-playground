@@ -13,19 +13,16 @@ public class StringCalculator {
         String[] values = getStrings(value);
         int answer = getInteger(values[0]);
 
-        for(int i = 1; i < values.length; i++){
+        for (int i = 1; i < values.length; i++) {
             // 숫자인 경우
-            if(!(values[i].equals("+") || values[i].equals("-") || values[i].equals("*") || values[i].equals("/"))){
-                if(values[i - 1].equals("+")){
+            if (!(values[i].equals("+") || values[i].equals("-") || values[i].equals("*") || values[i].equals("/"))) {
+                if (values[i - 1].equals("+")) {
                     answer += Integer.parseInt(values[i]);
-                }
-                else if(values[i - 1].equals("-")){
+                } else if (values[i - 1].equals("-")) {
                     answer -= Integer.parseInt(values[i]);
-                }
-                else if(values[i - 1].equals("*")){
+                } else if (values[i - 1].equals("*")) {
                     answer *= Integer.parseInt(values[i]);
-                }
-                else{
+                } else {
                     answer /= Integer.parseInt(values[i]);
                 }
             }

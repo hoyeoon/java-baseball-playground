@@ -15,14 +15,14 @@ public class Application {
         Referee referee = new Referee();
 
         String message = "";
-        while(!message.equals("3스트라이크")){
+        while (!message.equals("3스트라이크")) {
             message = referee.compare(computer, askNumbers());
             System.out.println(message);
         }
         System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
     }
 
-    public static List<Integer> askNumbers(){
+    public static List<Integer> askNumbers() {
         System.out.print("숫자를 입력해 주세요 : ");
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
